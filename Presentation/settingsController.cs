@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Presentation
 {
@@ -27,6 +29,12 @@ namespace Presentation
         public SettingsModel getModel()
         {
             return _model;
+        }
+
+        public void changeImageFolder(string folderPath)
+        {
+            string[] files = Directory.GetFiles(folderPath);
+            MessageBox.Show("Files found: " + files.Length.ToString(), "Message");
         }
 
         public MainController getMainController()
