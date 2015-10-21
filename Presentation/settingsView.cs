@@ -50,5 +50,10 @@ namespace Presentation
                 _controller.changeImageFolder(folderBrowserDialog1.SelectedPath);
             }
         }
+
+        private void btnReloadImages_Click(object sender, EventArgs e)
+        {
+            _controller.getMainController().getPresentationController().loadImages();
+        }
     }
 }
