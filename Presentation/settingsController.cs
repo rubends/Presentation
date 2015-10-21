@@ -33,13 +33,18 @@ namespace Presentation
 
         public void changeImageFolder(string folderPath)
         {
-            string[] files = Directory.GetFiles(folderPath);
-            MessageBox.Show("Files found: " + files.Length.ToString(), "Message");
+            _model.ImagesFolderPath = folderPath;
+            _mainController.getPresentationController().loadImages();
         }
 
         public MainController getMainController()
         {
             return _mainController;
+        }
+
+        public string getImagesFolderPath()
+        {
+            return _model.ImagesFolderPath;
         }
     }
 }
