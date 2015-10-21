@@ -25,9 +25,20 @@ namespace Presentation
 
         }
 
-        private void btnOpenPresentation_Click(object sender, EventArgs e)
+        private void btnToggleFullscreen_Click(object sender, EventArgs e)
         {
-            _controller.getMainController().openPresentationView();
+            _controller.getModel().Fullscreen = !_controller.getModel().Fullscreen;
+
+            FullScreen fullScreen = new FullScreen();
+            
+            if(_controller.getModel().Fullscreen)
+            {
+                fullScreen.EnterFullScreenMode(_controller.getMainController().getPresentationController().getView());
+            }
+            else
+            {
+                fullScreen.LeaveFullScreenMode(_controller.getMainController().getPresentationController().getView());
+            }
         }
     }
 }

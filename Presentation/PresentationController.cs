@@ -14,6 +14,7 @@ namespace Presentation
         public PresentationController(MainController mainController)
         {
             _view = new PresentationView(this);
+            _view.Show();
             _mainController = mainController;
         }
 

@@ -33,13 +33,5 @@ namespace Presentation
         {
             return _presentationController;
         }
-
-        public void openPresentationView()
-        {
-            _presentationController.getView().Show();
-
-            FullScreen fullScreen = new FullScreen();
-            fullScreen.EnterFullScreenMode(_presentationController.getView());
-        }
     }
 }
