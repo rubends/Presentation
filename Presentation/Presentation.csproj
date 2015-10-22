@@ -48,7 +48,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GlobalVar.cs" />
+    <Compile Include="ImageController.cs" />
     <Compile Include="ImageDirectory.cs" />
+    <Compile Include="ImageModel.cs" />
+    <Compile Include="ImageView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImageView.Designer.cs">
+      <DependentUpon>ImageView.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainController.cs" />
     <Compile Include="MainView.cs">
       <SubType>Form</SubType>
@@ -90,6 +98,9 @@
     <Compile Include="TweetView.Designer.cs">
       <DependentUpon>TweetView.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ImageView.resx">
+      <DependentUpon>ImageView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>

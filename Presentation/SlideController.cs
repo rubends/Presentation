@@ -24,6 +24,13 @@ namespace Presentation
       _view.UpdateView();
       
     }
+    public void SetSlide(ImageController img)
+    {
+      _model.Image = img;
+      _model.SlideType = GlobalVar.SLIDE_TYPE_IMAGE;
+      _view.UpdateView();
+
+    }
     public SlideModel GetModel()
     {
       return _model;

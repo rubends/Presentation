@@ -11,6 +11,7 @@ namespace Presentation
     private SlideController _controller;
     private int _slideType;
     private TweetController _tweet;
+    private ImageController _image;
     //private ImageController _image;
     public SlideModel(SlideController controller)
     {
@@ -36,6 +37,17 @@ namespace Presentation
       set
       {
         _tweet = value;
+      }
+    }
+    public ImageController Image
+    {
+      get
+      {
+        return _image;
+      }
+      set
+      {
+        _image = value;
       }
     }
   }
