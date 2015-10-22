@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Presentation
 {
@@ -39,6 +40,20 @@ namespace Presentation
             {
                 fullScreen.LeaveFullScreenMode(_controller.getMainController().getPresentationController().getView());
             }
+        }
+
+        private void btnOpenFolderBrowser_Click(object sender, EventArgs e)
+        {
+            DialogResult result = folderBrowserDialog1.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                _controller.changeImageFolder(folderBrowserDialog1.SelectedPath);
+            }
+        }
+
+        private void btnReloadImages_Click(object sender, EventArgs e)
+        {
+            _controller.getMainController().getPresentationController().loadImages();
         }
     }
 }

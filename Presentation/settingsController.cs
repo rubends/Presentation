@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Presentation
 {
@@ -29,9 +31,20 @@ namespace Presentation
             return _model;
         }
 
+        public void changeImageFolder(string folderPath)
+        {
+            _model.ImagesFolderPath = folderPath;
+            _mainController.getPresentationController().loadImages();
+        }
+
         public MainController getMainController()
         {
             return _mainController;
+        }
+
+        public string getImagesFolderPath()
+        {
+            return _model.ImagesFolderPath;
         }
     }
 }

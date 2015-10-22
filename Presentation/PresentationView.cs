@@ -25,5 +25,11 @@ namespace Presentation
         {
 
         }
+
+        private void PresentationView_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Console.WriteLine("closed form");
+            Application.Exit();
+        }
     }
 }

@@ -48,6 +48,7 @@
             this.Controls.Add(this.label1);
             this.Name = "PresentationView";
             this.Text = "Presentation View";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PresentationView_FormClosing);
             this.Load += new System.EventHandler(this.PresentationView_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
