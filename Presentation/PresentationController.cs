@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,7 +40,7 @@ namespace Presentation
                     MessageBox.Show("Files loaded: " + imagesDir.getLength().ToString(), "Message");
                     foreach(string imagePath in imagesDir.getImagePaths())
                     {
-
+                        Debug.WriteLine(imagePath);
                     }
                 }
                 else
