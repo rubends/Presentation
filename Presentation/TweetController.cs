@@ -20,10 +20,15 @@ namespace Presentation
     {
       _model.TweetUser = user;
       _model.TweetText = text;
+      _view.UpdateView();
     }
     public TweetModel GetModel()
     {
       return _model;
+    }
+    public TweetView GetView()
+    {
+      return _view;
     }
   }
 }

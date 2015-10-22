@@ -19,6 +19,13 @@ namespace Presentation
       InitializeComponent();
     }
 
+    public void UpdateView()
+    {
+      if(_controller.GetModel().SlideType == GlobalVar.SLIDE_TYPE_TWEET)
+      {
+        Controls.Add(_controller.GetModel().Tweet.GetView());
+      }
+    }
     private void SlideView_Load(object sender, EventArgs e)
     {
 

@@ -17,9 +17,16 @@ namespace Presentation
       _view = new SlideView(this);
     }
 
-    public void SetSlide()
+    public void SetSlide(TweetController tweet)
     {
-
+      _model.Tweet = tweet;
+      _model.SlideType = GlobalVar.SLIDE_TYPE_TWEET;
+      _view.UpdateView();
+      
+    }
+    public SlideModel GetModel()
+    {
+      return _model;
     }
   }
 }
