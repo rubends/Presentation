@@ -16,6 +16,8 @@ namespace Presentation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+
+            // start main controller
             MainController controller = new MainController();
             Application.Run(controller.getView());
         }

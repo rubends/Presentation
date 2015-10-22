@@ -26,7 +26,7 @@ namespace Presentation
 
         public void loadImages()
         {
-            string imagesPath = _mainController.getSettingsController().getImagesFolderPath();
+            string imagesPath = _mainController.getSettingsController().getImagesFolderPath(); // image path uit settings Model
             if (imagesPath == null)
             {
                 MessageBox.Show("No image folder path set!", "Error");
