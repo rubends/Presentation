@@ -23,10 +23,12 @@ namespace Presentation
 
         private void PresentationView_Load(object sender, EventArgs e)
         {
-          TweetController tweet = new TweetController();
-          tweet.SetTweet("Rubends", "wauw, wat eeen mooie app");
+          //TweetController tweet = new TweetController();
+          //tweet.SetTweet("Rubends", "wauw, wat eeen mooie app");
+          ImageController image = new ImageController();
+          image.SetImage(@"C:\Users\ruben_000\Dropbox\Photos\Pictures\70skate3.jpg");
           SlideController slide = new SlideController();
-          slide.SetSlide(tweet);
+          slide.SetSlide(image);
 
           Controls.Add(slide.GetView());
         }
