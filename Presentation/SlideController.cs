@@ -28,5 +28,9 @@ namespace Presentation
     {
       return _model;
     }
+    public SlideView GetView()
+    {
+      return _view;
+    }
   }
 }

@@ -74,6 +74,22 @@
     <Compile Include="SettingsView.Designer.cs">
       <DependentUpon>SettingsView.cs</DependentUpon>
     </Compile>
+    <Compile Include="SlideController.cs" />
+    <Compile Include="SlideModel.cs" />
+    <Compile Include="SlideView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SlideView.Designer.cs">
+      <DependentUpon>SlideView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TweetController.cs" />
+    <Compile Include="TweetModel.cs" />
+    <Compile Include="TweetView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TweetView.Designer.cs">
+      <DependentUpon>TweetView.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,6 +107,12 @@
     </Compile>
     <EmbeddedResource Include="SettingsView.resx">
       <DependentUpon>SettingsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlideView.resx">
+      <DependentUpon>SlideView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TweetView.resx">
+      <DependentUpon>TweetView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
