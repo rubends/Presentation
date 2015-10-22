@@ -26,10 +26,11 @@ namespace Presentation
     }
     public void UpdateView()
     {
-      FileStream fs = new System.IO.FileStream(_controller.GetModel().ImagePath, FileMode.Open, FileAccess.Read);
-      pictureBox1.Image = Image.FromStream(fs);
-      fs.Close();
-      //pictureBox1.Image = Image.FromFile();
+      //FileStream fs = new System.IO.FileStream(_controller.GetModel().ImagePath, FileMode.Open, FileAccess.Read);
+      //pictureBox1.Image = Image.FromStream(fs);
+      //fs.Close();
+      pictureBox1.Image = Image.FromFile(@"C:\Users\ruben_000\Dropbox\Photos\Pictures\70skate3.jpg");
+
     }
   }
 }
