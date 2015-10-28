@@ -25,6 +25,10 @@ namespace Presentation
       {
         Controls.Add(_controller.GetModel().Tweet.GetView());
       }
+      else if (_controller.GetModel().SlideType == GlobalVar.SLIDE_TYPE_IMAGE)
+      {
+        Controls.Add(_controller.GetModel().Image.GetView());
+      }
     }
     private void SlideView_Load(object sender, EventArgs e)
     {
