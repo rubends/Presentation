@@ -29,7 +29,12 @@ namespace Presentation
       //FileStream fs = new System.IO.FileStream(_controller.GetModel().ImagePath, FileMode.Open, FileAccess.Read);
       //pictureBox1.Image = Image.FromStream(fs);
       //fs.Close();
-      pictureBox1.Image = Image.FromFile(@"C:\Users\ruben_000\Dropbox\Photos\Pictures\70skate3.jpg");
+      pictureBox1.Image = Image.FromFile(_controller.GetModel().ImagePath);
+
+    }
+
+    private void pictureBox1_Click(object sender, EventArgs e)
+    {
 
     }
   }
