@@ -24,6 +24,11 @@ namespace Presentation
       _view.UpdateView();
       
     }
+
+    public void ResizeSlide()
+        {
+            _model.Image.GetView().ResizeImage();
+        }
     public void SetSlide(ImageController img)
     {
       _model.Image = img;

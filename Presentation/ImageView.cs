@@ -22,8 +22,6 @@ namespace Presentation
 
     private void ImageView_Load(object sender, EventArgs e)
     {
-            pictureBox1.Width = _controller.GetPresentation().getView().Width;
-            pictureBox1.Height = _controller.GetPresentation().getView().Height;
     }
     public void UpdateView()
     {
@@ -33,10 +31,11 @@ namespace Presentation
       pictureBox1.Image = Image.FromFile(_controller.GetModel().ImagePath);
 
     }
-
-    private void pictureBox1_Click(object sender, EventArgs e)
+        
+   public void ResizeImage()
     {
-
+        pictureBox1.Width = _controller.GetPresentation().getView().Width;
+        pictureBox1.Height = _controller.GetPresentation().getView().Height;
     }
   }
 }

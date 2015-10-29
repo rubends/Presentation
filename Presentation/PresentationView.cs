@@ -46,6 +46,7 @@ namespace Presentation
             SlideView nextSlide = _controller.getModel().Slides[_controller.getModel().CurrentSlide].GetView();
             nextSlide.Dock = DockStyle.Fill;
             Controls.Add(nextSlide);
+            _controller.getModel().Slides[_controller.getModel().CurrentSlide].ResizeSlide();
             Console.WriteLine("Next slide");
 
         }
