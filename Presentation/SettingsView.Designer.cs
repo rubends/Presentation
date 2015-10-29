@@ -32,6 +32,10 @@
             this.btnOpenFolderBrowser = new System.Windows.Forms.Button();
             this.folderBrowserDialog1 = new System.Windows.Forms.FolderBrowserDialog();
             this.btnReloadImages = new System.Windows.Forms.Button();
+            this.btnPrevSlide = new System.Windows.Forms.Button();
+            this.btnNextSlide = new System.Windows.Forms.Button();
+            this.numericSlideTime = new System.Windows.Forms.NumericUpDown();
+            ((System.ComponentModel.ISupportInitialize)(this.numericSlideTime)).BeginInit();
             this.SuspendLayout();
             // 
             // btnToggleFullscreen
@@ -46,7 +50,7 @@
             // 
             // btnOpenFolderBrowser
             // 
-            this.btnOpenFolderBrowser.Location = new System.Drawing.Point(3, 49);
+            this.btnOpenFolderBrowser.Location = new System.Drawing.Point(153, 3);
             this.btnOpenFolderBrowser.Name = "btnOpenFolderBrowser";
             this.btnOpenFolderBrowser.Size = new System.Drawing.Size(144, 40);
             this.btnOpenFolderBrowser.TabIndex = 2;
@@ -60,7 +64,7 @@
             // 
             // btnReloadImages
             // 
-            this.btnReloadImages.Location = new System.Drawing.Point(3, 95);
+            this.btnReloadImages.Location = new System.Drawing.Point(303, 3);
             this.btnReloadImages.Name = "btnReloadImages";
             this.btnReloadImages.Size = new System.Drawing.Size(144, 40);
             this.btnReloadImages.TabIndex = 3;
@@ -68,16 +72,53 @@
             this.btnReloadImages.UseVisualStyleBackColor = true;
             this.btnReloadImages.Click += new System.EventHandler(this.btnReloadImages_Click);
             // 
+            // btnPrevSlide
+            // 
+            this.btnPrevSlide.Location = new System.Drawing.Point(3, 65);
+            this.btnPrevSlide.Name = "btnPrevSlide";
+            this.btnPrevSlide.Size = new System.Drawing.Size(144, 40);
+            this.btnPrevSlide.TabIndex = 4;
+            this.btnPrevSlide.Text = "<<";
+            this.btnPrevSlide.UseVisualStyleBackColor = true;
+            this.btnPrevSlide.Click += new System.EventHandler(this.btnPrevSlide_Click);
+            // 
+            // btnNextSlide
+            // 
+            this.btnNextSlide.Location = new System.Drawing.Point(153, 65);
+            this.btnNextSlide.Name = "btnNextSlide";
+            this.btnNextSlide.Size = new System.Drawing.Size(144, 40);
+            this.btnNextSlide.TabIndex = 5;
+            this.btnNextSlide.Text = ">>";
+            this.btnNextSlide.UseVisualStyleBackColor = true;
+            this.btnNextSlide.Click += new System.EventHandler(this.btnNextSlide_Click);
+            // 
+            // numericSlideTime
+            // 
+            this.numericSlideTime.Location = new System.Drawing.Point(312, 77);
+            this.numericSlideTime.Name = "numericSlideTime";
+            this.numericSlideTime.Size = new System.Drawing.Size(120, 20);
+            this.numericSlideTime.TabIndex = 6;
+            this.numericSlideTime.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.numericSlideTime.ValueChanged += new System.EventHandler(this.numericSlideTime_ValueChanged);
+            // 
             // SettingsView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.numericSlideTime);
+            this.Controls.Add(this.btnNextSlide);
+            this.Controls.Add(this.btnPrevSlide);
             this.Controls.Add(this.btnReloadImages);
             this.Controls.Add(this.btnOpenFolderBrowser);
             this.Controls.Add(this.btnToggleFullscreen);
             this.Name = "SettingsView";
-            this.Size = new System.Drawing.Size(283, 180);
+            this.Size = new System.Drawing.Size(453, 138);
             this.Load += new System.EventHandler(this.SettingsView_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.numericSlideTime)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -87,5 +128,8 @@
         private System.Windows.Forms.Button btnOpenFolderBrowser;
         private System.Windows.Forms.FolderBrowserDialog folderBrowserDialog1;
         private System.Windows.Forms.Button btnReloadImages;
+        private System.Windows.Forms.Button btnPrevSlide;
+        private System.Windows.Forms.Button btnNextSlide;
+        private System.Windows.Forms.NumericUpDown numericSlideTime;
     }
 }

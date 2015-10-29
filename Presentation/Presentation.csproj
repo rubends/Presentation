@@ -84,6 +84,7 @@
     <Compile Include="SettingsView.Designer.cs">
       <DependentUpon>SettingsView.cs</DependentUpon>
     </Compile>
+    <Compile Include="ShuffleRandom.cs" />
     <Compile Include="SlideController.cs" />
     <Compile Include="SlideModel.cs" />
     <Compile Include="SlideView.cs">

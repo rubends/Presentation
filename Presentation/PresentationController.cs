@@ -27,7 +27,6 @@ namespace Presentation
             emptyTweet.SetTweet("No slides", "Please load images or tweets?");
             _model.EmptySlide.SetSlide(emptyTweet);
             _model.addSlide(_model.EmptySlide);
-            _view.startPresentation();
         }
 
         public PresentationView getView()
@@ -40,7 +39,7 @@ namespace Presentation
             return _model;
         }
 
-        public SlideController GetNextSlide()
+        public void NextSlide()
         {
             if(_model.Slides.Count > 0)
             {
@@ -48,32 +47,21 @@ namespace Presentation
                 {
                     // next slide is good
                     _model.CurrentSlide++;
-                    return _model.Slides[_model.CurrentSlide];
                 }
                 else
                 {
                     //start over
                     _model.CurrentSlide = 0;
-                    return _model.Slides.First();
                 }
             } else
             {
                 _model.CurrentSlide = 0;
-                return _model.EmptySlide;
             }
+
+            _view.UpdateView();
         }
 
-        public SlideController GetCurrentSlide()
-        {
-            if (_model.Slides.Count > 0) return _model.Slides[_model.CurrentSlide];
-            else
-            {
-                _model.CurrentSlide = 0;
-                return _model.EmptySlide;
-            }
-        }
-
-        public SlideController PrevSlide()
+        public void PrevSlide()
         {
             if(_model.Slides.Count > 0)
             {
@@ -81,19 +69,22 @@ namespace Presentation
                 {
                     // prev slide is good
                     _model.CurrentSlide--;
-                    return _model.Slides[_model.CurrentSlide];
                 }
                 else
                 {
                     //start over
                     _model.CurrentSlide = _model.Slides.Count - 1;
-                    return _model.Slides[_model.CurrentSlide];
                 }
             } else
             {
                 _model.CurrentSlide = 0;
-                return _model.EmptySlide;
             }
+            _view.UpdateView();
+        }
+
+        public void InitSlides()
+        {
+            _model.Slides.Shuffle();
         }
 
         public void loadImages()
@@ -109,6 +100,10 @@ namespace Presentation
                 if (imagesDir.getLength() > 0)
                 {
                     MessageBox.Show("Files loaded: " + imagesDir.getLength().ToString(), "Message");
+
+                    // empty all slides
+                    _model.Slides = new List<SlideController>();
+
                     foreach(string imagePath in imagesDir.getImagePaths())
                     {
                         ImageController image = new ImageController(this);
@@ -116,7 +111,7 @@ namespace Presentation
                         SlideController slide = new SlideController();
                         slide.SetSlide(image);
                         _model.addSlide(slide);
-                        _view.startPresentation();
+                        InitSlides();
                     }
                 }
                 else

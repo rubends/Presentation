@@ -31,23 +31,20 @@ namespace Presentation
             Application.Exit();
         }
 
-        public void startPresentation()
+        public void UpdateView()
         {
-            //List<SlideController> slides = _controller.getModel().Slides;
-            //foreach (SlideController slide in slides)
-            //{
-            //    int xPos = this.Width * slides.IndexOf(slide);
-            //    slide.GetView().Location = new Point(xPos, 0);
-            //    Controls.Add(slide.GetView());
-            //}
+            // remove old slides
+            foreach (Control controlItem in Controls.OfType<SlideView>())
+            {
+                Controls.Remove(controlItem);
+            }
 
-            ShowSlide(0);
+            // add requested slide
+            SlideView nextSlide = _controller.getModel().Slides[_controller.getModel().CurrentSlide].GetView();
+            nextSlide.Dock = DockStyle.Fill;
+            Controls.Add(nextSlide);
+            Console.WriteLine("Next slide");
 
-
-        }
-
-        public void ShowSlide(int slideNr)
-        {
         }
 
         private void movementTimer_Tick(object sender, EventArgs e)
@@ -57,15 +54,7 @@ namespace Presentation
 
         public void NextSlide()
         {
-            // remove previous slide
-            SlideController currSlide = _controller.GetCurrentSlide();
-            Controls.Remove(currSlide.GetView());
-
-            // add requested slide
-            SlideView nextSlide = _controller.GetNextSlide().GetView();
-            nextSlide.Dock = DockStyle.Fill;
-            Controls.Add(nextSlide);
-            Console.WriteLine("Next slide");
+            _controller.NextSlide();
         }
     }
 }

@@ -10,6 +10,19 @@ namespace Presentation
     {
         private bool _fullscreen = false;
         private string _imagesFolderPath = "";
+        private int _secondsBetweenSlides = 5;
+
+        public int SecondsBetweenSlides
+        {
+            get
+            {
+                return _secondsBetweenSlides;
+            }
+            set
+            {
+                _secondsBetweenSlides = value;
+            }
+        }
 
         public bool Fullscreen
         {
