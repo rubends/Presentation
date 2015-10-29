@@ -48,7 +48,8 @@ namespace Presentation
                 await
                 (from search in ctx.Search
                  where search.Type == SearchType.Search &&
-                       search.Query == searchString
+                       search.Query == searchString &&
+                       search.Count == 100
                  select search)
                 .SingleOrDefaultAsync();
 
@@ -61,11 +62,13 @@ namespace Presentation
                      Text = tweet.Text
                  })
                 .ToList();
-            
+
+            string result = "";
             foreach(TweetViewModel tweet in tweets)
             {
-                Console.WriteLine(tweet.ScreenName);
+                result += tweet.Text + "\n";
             }
+            label1.Text = result;
 
         }
     }
