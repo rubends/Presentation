@@ -11,31 +11,37 @@ using System.IO;
 
 namespace Presentation
 {
-  public partial class ImageView : UserControl
-  {
-    private ImageController _controller;
-    public ImageView(ImageController controller)
+    public partial class ImageView : UserControl
     {
-      _controller = controller;
-      InitializeComponent();
-    }
+        private ImageController _controller;
 
-    private void ImageView_Load(object sender, EventArgs e)
-    {
-    }
-    public void UpdateView()
-    {
-      //FileStream fs = new System.IO.FileStream(_controller.GetModel().ImagePath, FileMode.Open, FileAccess.Read);
-      //pictureBox1.Image = Image.FromStream(fs);
-      //fs.Close();
-      pictureBox1.Image = Image.FromFile(_controller.GetModel().ImagePath);
+        public ImageView(ImageController controller)
+        {
+            _controller = controller;
+            InitializeComponent();
+        }
 
+        private void ImageView_Load(object sender, EventArgs e)
+        {
+        }
+        public void UpdateView()
+        {
+            //FileStream fs = new System.IO.FileStream(_controller.GetModel().ImagePath, FileMode.Open, FileAccess.Read);
+            //pictureBox1.Image = Image.FromStream(fs);
+            //fs.Close();
+            pictureBox1.Image = Image.FromFile(_controller.GetModel().ImagePath);
+            ResizeImage();
+        }
+
+        public void ResizeImage()
+        {
+            pictureBox1.Width = _controller.GetPresentation().getView().Width;
+            pictureBox1.Height = _controller.GetPresentation().getView().Height;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
-        
-   public void ResizeImage()
-    {
-        pictureBox1.Width = _controller.GetPresentation().getView().Width;
-        pictureBox1.Height = _controller.GetPresentation().getView().Height;
-    }
-  }
 }

@@ -43,10 +43,11 @@ namespace Presentation
             }
 
             // add requested slide
-            SlideView nextSlide = _controller.getModel().Slides[_controller.getModel().CurrentSlide].GetView();
-            nextSlide.Dock = DockStyle.Fill;
-            Controls.Add(nextSlide);
-            _controller.getModel().Slides[_controller.getModel().CurrentSlide].ResizeSlide();
+            SlideController nextSlide = _controller.getModel().Slides[_controller.getModel().CurrentSlide];
+            nextSlide.GetView().Dock = DockStyle.Fill;
+            nextSlide.ResizeContent();
+            Controls.Add(nextSlide.GetView());
+
             Console.WriteLine("Next slide");
 
         }
