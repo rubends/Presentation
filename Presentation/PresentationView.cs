@@ -63,7 +63,7 @@ namespace Presentation
             {
                 FullScreen fs = new FullScreen();
                 fs.LeaveFullScreenMode(this);
-                Console.WriteLine("esc");
+                _controller.getMain().getSettingsController().getModel().Fullscreen = false;
             }
         }
     }
