@@ -42,6 +42,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -72,6 +73,7 @@
     </Compile>
     <Compile Include="Fullscreen.cs" />
     <Compile Include="PresentationController.cs" />
+    <Compile Include="PresentationModel.cs" />
     <Compile Include="PresentationView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +90,7 @@
     <Compile Include="SettingsView.Designer.cs">
       <DependentUpon>SettingsView.cs</DependentUpon>
     </Compile>
+    <Compile Include="ShuffleRandom.cs" />
     <Compile Include="SlideController.cs" />
     <Compile Include="SlideModel.cs" />
     <Compile Include="SlideView.cs">

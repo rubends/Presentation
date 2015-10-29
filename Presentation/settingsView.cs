@@ -55,5 +55,20 @@ namespace Presentation
         {
             _controller.getMainController().getPresentationController().loadImages();
         }
+
+        private void btnPrevSlide_Click(object sender, EventArgs e)
+        {
+            _controller.getMainController().getPresentationController().PrevSlide();
+        }
+
+        private void btnNextSlide_Click(object sender, EventArgs e)
+        {
+            _controller.getMainController().getPresentationController().NextSlide();
+        }
+
+        private void numericSlideTime_ValueChanged(object sender, EventArgs e)
+        {
+            _controller.getModel().SecondsBetweenSlides = (int) numericSlideTime.Value;
+        }
     }
 }
