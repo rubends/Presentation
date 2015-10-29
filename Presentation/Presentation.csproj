@@ -36,6 +36,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -48,7 +49,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="GlobalVar.cs" />
+    <Compile Include="ImageController.cs" />
     <Compile Include="ImageDirectory.cs" />
+    <Compile Include="ImageModel.cs" />
+    <Compile Include="ImageView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ImageView.Designer.cs">
+      <DependentUpon>ImageView.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainController.cs" />
     <Compile Include="MainView.cs">
       <SubType>Form</SubType>
@@ -58,6 +67,7 @@
     </Compile>
     <Compile Include="Fullscreen.cs" />
     <Compile Include="PresentationController.cs" />
+    <Compile Include="PresentationModel.cs" />
     <Compile Include="PresentationView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +84,26 @@
     <Compile Include="SettingsView.Designer.cs">
       <DependentUpon>SettingsView.cs</DependentUpon>
     </Compile>
+    <Compile Include="ShuffleRandom.cs" />
+    <Compile Include="SlideController.cs" />
+    <Compile Include="SlideModel.cs" />
+    <Compile Include="SlideView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SlideView.Designer.cs">
+      <DependentUpon>SlideView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TweetController.cs" />
+    <Compile Include="TweetModel.cs" />
+    <Compile Include="TweetView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TweetView.Designer.cs">
+      <DependentUpon>TweetView.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ImageView.resx">
+      <DependentUpon>ImageView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainView.resx">
       <DependentUpon>MainView.cs</DependentUpon>
     </EmbeddedResource>
@@ -91,6 +121,12 @@
     </Compile>
     <EmbeddedResource Include="SettingsView.resx">
       <DependentUpon>SettingsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SlideView.resx">
+      <DependentUpon>SlideView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TweetView.resx">
+      <DependentUpon>TweetView.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

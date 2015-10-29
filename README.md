@@ -7,3 +7,4 @@ Interessante URLs
 medewerkers
 - Ruben De Swaef
 - Alex Vanderbist
+- Tyas Lambrechts

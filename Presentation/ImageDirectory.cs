@@ -32,6 +32,7 @@ namespace Presentation
             {
                 filesFound.AddRange(Directory.GetFiles(_imagesDir, String.Format("*.{0}", filter), searchOption));
             }
+
             return filesFound.ToArray();
         }
 
