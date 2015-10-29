@@ -50,7 +50,7 @@
       this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
       this.Controls.Add(this.pictureBox1);
       this.Name = "ImageView";
-      this.Size = new System.Drawing.Size(461, 404);
+      this.Size = new System.Drawing.Size(325, 296);
       this.Load += new System.EventHandler(this.ImageView_Load);
       ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
       this.ResumeLayout(false);
