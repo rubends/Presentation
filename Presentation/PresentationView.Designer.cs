@@ -29,14 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.movementTimer = new System.Windows.Forms.Timer(this.components);
+            this.slideTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
-            // movementTimer
+            // slideTimer
             // 
-            this.movementTimer.Enabled = true;
-            this.movementTimer.Interval = 5000;
-            this.movementTimer.Tick += new System.EventHandler(this.movementTimer_Tick);
+            this.slideTimer.Enabled = true;
+            this.slideTimer.Interval = 5000;
+            this.slideTimer.Tick += new System.EventHandler(this.slideTimer_Tick);
             // 
             // PresentationView
             // 
@@ -52,6 +52,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Timer movementTimer;
+        private System.Windows.Forms.Timer slideTimer;
     }
 }

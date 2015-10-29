@@ -39,6 +39,11 @@ namespace Presentation
             return _model;
         }
 
+        public MainController getMain()
+        {
+            return _mainController;
+        }
+
         public void NextSlide()
         {
             if(_model.Slides.Count > 0)

@@ -33,6 +33,9 @@ namespace Presentation
 
         public void UpdateView()
         {
+            // reset timer
+            slideTimer.Interval = _controller.getMain().getSettingsController().getModel().SecondsBetweenSlides * 1000;
+
             // remove old slides
             foreach (Control controlItem in Controls.OfType<SlideView>())
             {
@@ -47,12 +50,7 @@ namespace Presentation
 
         }
 
-        private void movementTimer_Tick(object sender, EventArgs e)
-        {
-            NextSlide();
-        }
-
-        public void NextSlide()
+        private void slideTimer_Tick(object sender, EventArgs e)
         {
             _controller.NextSlide();
         }
