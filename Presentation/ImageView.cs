@@ -35,8 +35,8 @@ namespace Presentation
 
         public void ResizeImage()
         {
-            pictureBox1.Width = _controller.GetPresentation().getView().Width;
-            pictureBox1.Height = _controller.GetPresentation().getView().Height;
+            pictureBox1.Width = _controller.GetPresentation().getView().ClientSize.Width;
+            pictureBox1.Height = _controller.GetPresentation().getView().ClientSize.Height;
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

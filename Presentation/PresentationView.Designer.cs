@@ -47,6 +47,7 @@
             this.Text = "Presentation View";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.PresentationView_FormClosing);
             this.Load += new System.EventHandler(this.PresentationView_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PresentationView_KeyDown);
             this.ResumeLayout(false);
 
         }

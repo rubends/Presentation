@@ -56,5 +56,15 @@ namespace Presentation
         {
             _controller.NextSlide();
         }
+
+        private void PresentationView_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                FullScreen fs = new FullScreen();
+                fs.LeaveFullScreenMode(this);
+                Console.WriteLine("esc");
+            }
+        }
     }
 }
