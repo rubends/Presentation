@@ -193,7 +193,7 @@ namespace Presentation
                 }
 
 
-                Console.WriteLine(tweetCounter + "=" + amountOfTweetsBetweenGroups + " & " + imageCounter + "=" + imagesInRealGroup);
+                //Console.WriteLine(tweetCounter + "=" + amountOfTweetsBetweenGroups + " & " + imageCounter + "=" + imagesInRealGroup);
 
                 //reset image and tweetcounter if necessary
                 if (tweetCounter == amountOfTweetsBetweenGroups && imageCounter == imagesInRealGroup)
