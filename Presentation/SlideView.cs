@@ -23,18 +23,20 @@ namespace Presentation
     {
       if(_controller.GetModel().SlideType == GlobalVar.SLIDE_TYPE_TWEET)
             {
-                _controller.GetModel().Tweet.GetView().Dock = DockStyle.Fill;
-                Controls.Add(_controller.GetModel().Tweet.GetView());
+                TweetView tweet = _controller.GetModel().Tweet.GetView();
+                tweet.Location = new Point(Screen.PrimaryScreen.Bounds.Width/2, Screen.PrimaryScreen.Bounds.Height/2);
+                Controls.Add(tweet);
       }
       else if (_controller.GetModel().SlideType == GlobalVar.SLIDE_TYPE_IMAGE)
       {
-            _controller.GetModel().Image.GetView().Dock = DockStyle.Fill;
-            Controls.Add(_controller.GetModel().Image.GetView());
+            ImageView image = _controller.GetModel().Image.GetView();
+            image.Dock = DockStyle.Fill;
+            Controls.Add(image);
       }
+            
     }
     private void SlideView_Load(object sender, EventArgs e)
     {
-
     }
   }
 }

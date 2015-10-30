@@ -20,7 +20,7 @@ namespace Presentation
             _model = new SettingsModel();
             _mainController = mainController;
 
-            _model.TwitterSearch = "ILSJ";
+            _model.TwitterSearch = "MTAntwerp";
             _model.MaxTweets = 50;
             _model.ImageGroupSize = 5;
             _model.SecondsBetweenSlides = 5;

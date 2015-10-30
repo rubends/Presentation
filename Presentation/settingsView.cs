@@ -32,6 +32,7 @@ namespace Presentation
             numericImageGroupSize.Value = _controller.getModel().ImageGroupSize;
             numericMaxTweets.Value = _controller.getModel().MaxTweets;
             numericSlideTime.Value = _controller.getModel().SecondsBetweenSlides;
+
         }
 
         private void btnToggleFullscreen_Click(object sender, EventArgs e)

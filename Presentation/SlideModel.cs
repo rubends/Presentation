@@ -12,7 +12,6 @@ namespace Presentation
     private int _slideType;
     private TweetController _tweet;
     private ImageController _image;
-    //private ImageController _image;
     public SlideModel(SlideController controller)
     {
       _controller = controller;
@@ -28,6 +27,8 @@ namespace Presentation
         _slideType = value;
       }
     }
+
+    
     public TweetController Tweet
     {
       get 

@@ -27,8 +27,13 @@ namespace Presentation
 
     public void UpdateView()
     {
-      lblText.Text = _controller.GetModel().TweetText;
-      lblUser.Text = _controller.GetModel().TweetUser;
+      lblText.Text =  _controller.GetModel().TweetText;
+      lblUser.Text = "- @" + _controller.GetModel().TweetUser;
     }
-  }
+
+        private void lblText_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

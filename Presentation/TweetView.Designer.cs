@@ -36,6 +36,7 @@
             // 
             this.lblUser.AutoSize = true;
             this.lblUser.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.lblUser.Location = new System.Drawing.Point(493, 115);
             this.lblUser.Name = "lblUser";
             this.lblUser.Size = new System.Drawing.Size(54, 25);
@@ -47,20 +48,22 @@
             // 
             this.lblText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblText.AutoSize = true;
             this.lblText.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblText.Location = new System.Drawing.Point(228, 19);
+            this.lblText.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblText.Location = new System.Drawing.Point(59, 19);
             this.lblText.Name = "lblText";
-            this.lblText.Size = new System.Drawing.Size(100, 39);
+            this.lblText.Size = new System.Drawing.Size(459, 96);
             this.lblText.TabIndex = 1;
             this.lblText.Text = "tweet";
             this.lblText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblText.Click += new System.EventHandler(this.lblText_Click);
             // 
             // TweetView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
+            this.BackColor = System.Drawing.Color.Black;
             this.Controls.Add(this.lblText);
             this.Controls.Add(this.lblUser);
             this.Name = "TweetView";
