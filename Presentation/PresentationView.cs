@@ -43,10 +43,11 @@ namespace Presentation
             }
 
             // add requested slide
-            SlideView nextSlide = _controller.getModel().Slides[_controller.getModel().CurrentSlide].GetView();
-            nextSlide.Dock = DockStyle.Fill;
-            Controls.Add(nextSlide);
-            _controller.getModel().Slides[_controller.getModel().CurrentSlide].ResizeSlide();
+            SlideController nextSlide = _controller.getModel().Slides[_controller.getModel().CurrentSlide];
+            nextSlide.GetView().Dock = DockStyle.Fill;
+            nextSlide.ResizeContent();
+            Controls.Add(nextSlide.GetView());
+
             Console.WriteLine("Next slide");
 
         }
@@ -54,6 +55,21 @@ namespace Presentation
         private void slideTimer_Tick(object sender, EventArgs e)
         {
             _controller.NextSlide();
+        }
+
+        private void PresentationView_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Escape)
+            {
+                FullScreen fs = new FullScreen();
+                fs.LeaveFullScreenMode(this);
+                _controller.getMain().getSettingsController().getModel().Fullscreen = false;
+            }
+        }
+
+        private void tweetTimer_Tick(object sender, EventArgs e)
+        {
+            _controller.loadTweets();
         }
     }
 }

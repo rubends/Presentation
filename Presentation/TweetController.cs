@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using LinqToTwitter;
 
 namespace Presentation
 {
@@ -31,8 +30,6 @@ namespace Presentation
     {
       return _view;
     }
-
-    //TWITTERTEST //
 
 
 

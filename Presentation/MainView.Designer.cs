@@ -36,6 +36,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.KeyPreview = true;
             this.Name = "MainView";
             this.Text = "Presentation";
             this.Load += new System.EventHandler(this.MainView_Load);
