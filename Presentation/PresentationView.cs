@@ -66,5 +66,10 @@ namespace Presentation
                 _controller.getMain().getSettingsController().getModel().Fullscreen = false;
             }
         }
+
+        private void tweetTimer_Tick(object sender, EventArgs e)
+        {
+            _controller.loadTweets();
+        }
     }
 }

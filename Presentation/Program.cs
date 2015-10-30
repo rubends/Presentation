@@ -16,7 +16,7 @@ namespace Presentation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new TwitterTestForm());
+            //Application.Run(new TwitterTestForm());
 
             // start main controller
             MainController controller = new MainController();

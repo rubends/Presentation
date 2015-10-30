@@ -135,6 +135,7 @@
     <Compile Include="TweetView.Designer.cs">
       <DependentUpon>TweetView.cs</DependentUpon>
     </Compile>
+    <Compile Include="TweetViewModel.cs" />
     <Compile Include="TwitterTestForm.cs">
       <SubType>Form</SubType>
     </Compile>

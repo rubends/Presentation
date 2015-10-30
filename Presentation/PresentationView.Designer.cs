@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.slideTimer = new System.Windows.Forms.Timer(this.components);
+            this.tweetTimer = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // slideTimer
@@ -37,6 +38,12 @@
             this.slideTimer.Enabled = true;
             this.slideTimer.Interval = 5000;
             this.slideTimer.Tick += new System.EventHandler(this.slideTimer_Tick);
+            // 
+            // tweetTimer
+            // 
+            this.tweetTimer.Enabled = true;
+            this.tweetTimer.Interval = 30000;
+            this.tweetTimer.Tick += new System.EventHandler(this.tweetTimer_Tick);
             // 
             // PresentationView
             // 
@@ -55,5 +62,6 @@
 
         #endregion
         private System.Windows.Forms.Timer slideTimer;
+        private System.Windows.Forms.Timer tweetTimer;
     }
 }

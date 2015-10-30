@@ -17,6 +17,13 @@ namespace Presentation
             _view = new SlideView(this);
         }
 
+        public int SlideType {
+            get
+            {
+                return _model.SlideType;
+            }
+        }
+
         public void SetSlide(TweetController tweet)
         {
             _model.Tweet = tweet;
